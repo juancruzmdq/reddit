@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EE62AA00239BB78E000D20A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62A9FF239BB78E000D20A1 /* AppDelegate.swift */; };
-		EE62AA21239BB79D000D20A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE62AA04239BB79C000D20A1 /* LaunchScreen.storyboard */; };
-		EE62AA22239BB79D000D20A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE62AA06239BB79C000D20A1 /* Main.storyboard */; };
 		EE62AA24239BB79D000D20A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA09239BB79C000D20A1 /* SceneDelegate.swift */; };
 		EE62AA26239BB79D000D20A1 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA0E239BB79D000D20A1 /* Environment.swift */; };
 		EE62AA27239BB79D000D20A1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA0F239BB79D000D20A1 /* Config.swift */; };
@@ -22,13 +20,18 @@
 		EE62AA2E239BB79D000D20A1 /* RemoteServiceStrategies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA17239BB79D000D20A1 /* RemoteServiceStrategies.swift */; };
 		EE62AA2F239BB79D000D20A1 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA18239BB79D000D20A1 /* EndPoint.swift */; };
 		EE62AA30239BB79D000D20A1 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA19239BB79D000D20A1 /* Storyboard.swift */; };
-		EE62AA31239BB79D000D20A1 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA1B239BB79D000D20A1 /* CoreDataStore.swift */; };
-		EE62AA32239BB79D000D20A1 /* NSManagedObjectContext+SaveRecurrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA1C239BB79D000D20A1 /* NSManagedObjectContext+SaveRecurrent.swift */; };
-		EE62AA33239BB79D000D20A1 /* ManagedObjectModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA1D239BB79D000D20A1 /* ManagedObjectModelFactory.swift */; };
 		EE62AA34239BB79D000D20A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE62AA1E239BB79D000D20A1 /* Assets.xcassets */; };
 		EE62AA36239BB81B000D20A1 /* RedditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA35239BB81B000D20A1 /* RedditTests.swift */; };
 		EE62AA41239BB9D5000D20A1 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA3E239BB9D5000D20A1 /* MasterViewController.swift */; };
 		EE62AA42239BB9D5000D20A1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA40239BB9D5000D20A1 /* DetailViewController.swift */; };
+		EE62AA44239BBCFA000D20A1 /* RedditConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA43239BBCFA000D20A1 /* RedditConfig.swift */; };
+		EE62AA52239BBDF5000D20A1 /* RedditService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA51239BBDF5000D20A1 /* RedditService.swift */; };
+		EE62AA54239BBE1C000D20A1 /* RedditEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA53239BBE1C000D20A1 /* RedditEndPoint.swift */; };
+		EE62AA56239BBF3B000D20A1 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA55239BBF3B000D20A1 /* PostList.swift */; };
+		EE62AA5E239BC66C000D20A1 /* Reddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA5D239BC66C000D20A1 /* Reddit.swift */; };
+		EE62AA63239BC7DA000D20A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE62AA5F239BC7DA000D20A1 /* LaunchScreen.storyboard */; };
+		EE62AA64239BC7DA000D20A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE62AA61239BC7DA000D20A1 /* Main.storyboard */; };
+		EE62AA66239BCA41000D20A1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA65239BCA41000D20A1 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +49,6 @@
 		EE62A9EF239BB6A5000D20A1 /* redditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = redditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE62A9F5239BB6A5000D20A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE62A9FF239BB78E000D20A1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EE62AA05239BB79C000D20A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EE62AA07239BB79C000D20A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE62AA09239BB79C000D20A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = Views/SceneDelegate.swift; sourceTree = "<group>"; };
 		EE62AA0B239BB79D000D20A1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE62AA0E239BB79D000D20A1 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
@@ -61,13 +62,18 @@
 		EE62AA17239BB79D000D20A1 /* RemoteServiceStrategies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteServiceStrategies.swift; sourceTree = "<group>"; };
 		EE62AA18239BB79D000D20A1 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		EE62AA19239BB79D000D20A1 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
-		EE62AA1B239BB79D000D20A1 /* CoreDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
-		EE62AA1C239BB79D000D20A1 /* NSManagedObjectContext+SaveRecurrent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+SaveRecurrent.swift"; sourceTree = "<group>"; };
-		EE62AA1D239BB79D000D20A1 /* ManagedObjectModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectModelFactory.swift; sourceTree = "<group>"; };
 		EE62AA1E239BB79D000D20A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE62AA35239BB81B000D20A1 /* RedditTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditTests.swift; sourceTree = "<group>"; };
 		EE62AA3E239BB9D5000D20A1 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		EE62AA40239BB9D5000D20A1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EE62AA43239BBCFA000D20A1 /* RedditConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditConfig.swift; sourceTree = "<group>"; };
+		EE62AA51239BBDF5000D20A1 /* RedditService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditService.swift; sourceTree = "<group>"; };
+		EE62AA53239BBE1C000D20A1 /* RedditEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditEndPoint.swift; sourceTree = "<group>"; };
+		EE62AA55239BBF3B000D20A1 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
+		EE62AA5D239BC66C000D20A1 /* Reddit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reddit.swift; sourceTree = "<group>"; };
+		EE62AA60239BC7DA000D20A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE62AA62239BC7DA000D20A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE62AA65239BCA41000D20A1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +115,11 @@
 		EE62A9D9239BB6A4000D20A1 /* reddit */ = {
 			isa = PBXGroup;
 			children = (
-				EE62AA0B239BB79D000D20A1 /* Info.plist */,
+				EE62AA43239BBCFA000D20A1 /* RedditConfig.swift */,
+				EE62AA5D239BC66C000D20A1 /* Reddit.swift */,
 				EE62A9FF239BB78E000D20A1 /* AppDelegate.swift */,
 				EE62AA09239BB79C000D20A1 /* SceneDelegate.swift */,
+				EE62AA0B239BB79D000D20A1 /* Info.plist */,
 				EE62AA1E239BB79D000D20A1 /* Assets.xcassets */,
 				EE62AA0C239BB79D000D20A1 /* Common */,
 				EE62AA1F239BB79D000D20A1 /* Models */,
@@ -153,6 +161,8 @@
 		EE62AA0A239BB79D000D20A1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EE62AA51239BBDF5000D20A1 /* RedditService.swift */,
+				EE62AA53239BBE1C000D20A1 /* RedditEndPoint.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -163,7 +173,6 @@
 				EE62AA0D239BB79D000D20A1 /* Config */,
 				EE62AA10239BB79D000D20A1 /* Networking */,
 				EE62AA19239BB79D000D20A1 /* Storyboard.swift */,
-				EE62AA1A239BB79D000D20A1 /* LocalStore */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -192,19 +201,11 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		EE62AA1A239BB79D000D20A1 /* LocalStore */ = {
-			isa = PBXGroup;
-			children = (
-				EE62AA1B239BB79D000D20A1 /* CoreDataStore.swift */,
-				EE62AA1C239BB79D000D20A1 /* NSManagedObjectContext+SaveRecurrent.swift */,
-				EE62AA1D239BB79D000D20A1 /* ManagedObjectModelFactory.swift */,
-			);
-			path = LocalStore;
-			sourceTree = "<group>";
-		};
 		EE62AA1F239BB79D000D20A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EE62AA55239BBF3B000D20A1 /* PostList.swift */,
+				EE62AA65239BCA41000D20A1 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -226,8 +227,8 @@
 		EE62AA3B239BB934000D20A1 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				EE62AA04239BB79C000D20A1 /* LaunchScreen.storyboard */,
-				EE62AA06239BB79C000D20A1 /* Main.storyboard */,
+				EE62AA5F239BC7DA000D20A1 /* LaunchScreen.storyboard */,
+				EE62AA61239BC7DA000D20A1 /* Main.storyboard */,
 			);
 			name = Storyboards;
 			path = ..;
@@ -332,9 +333,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE62AA21239BB79D000D20A1 /* LaunchScreen.storyboard in Resources */,
-				EE62AA22239BB79D000D20A1 /* Main.storyboard in Resources */,
+				EE62AA64239BC7DA000D20A1 /* Main.storyboard in Resources */,
 				EE62AA34239BB79D000D20A1 /* Assets.xcassets in Resources */,
+				EE62AA63239BC7DA000D20A1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,19 +377,22 @@
 				EE62AA30239BB79D000D20A1 /* Storyboard.swift in Sources */,
 				EE62AA2C239BB79D000D20A1 /* Parser.swift in Sources */,
 				EE62AA00239BB78E000D20A1 /* AppDelegate.swift in Sources */,
-				EE62AA32239BB79D000D20A1 /* NSManagedObjectContext+SaveRecurrent.swift in Sources */,
-				EE62AA33239BB79D000D20A1 /* ManagedObjectModelFactory.swift in Sources */,
 				EE62AA2D239BB79D000D20A1 /* RemoteProviderServiceStrategyProtocol.swift in Sources */,
 				EE62AA2E239BB79D000D20A1 /* RemoteServiceStrategies.swift in Sources */,
 				EE62AA24239BB79D000D20A1 /* SceneDelegate.swift in Sources */,
 				EE62AA42239BB9D5000D20A1 /* DetailViewController.swift in Sources */,
 				EE62AA28239BB79D000D20A1 /* RemoteService.swift in Sources */,
+				EE62AA52239BBDF5000D20A1 /* RedditService.swift in Sources */,
 				EE62AA26239BB79D000D20A1 /* Environment.swift in Sources */,
+				EE62AA56239BBF3B000D20A1 /* PostList.swift in Sources */,
+				EE62AA66239BCA41000D20A1 /* Post.swift in Sources */,
 				EE62AA41239BB9D5000D20A1 /* MasterViewController.swift in Sources */,
 				EE62AA27239BB79D000D20A1 /* Config.swift in Sources */,
 				EE62AA29239BB79D000D20A1 /* StatusBarNetworkActivityIndicator.swift in Sources */,
+				EE62AA5E239BC66C000D20A1 /* Reddit.swift in Sources */,
+				EE62AA44239BBCFA000D20A1 /* RedditConfig.swift in Sources */,
 				EE62AA2F239BB79D000D20A1 /* EndPoint.swift in Sources */,
-				EE62AA31239BB79D000D20A1 /* CoreDataStore.swift in Sources */,
+				EE62AA54239BBE1C000D20A1 /* RedditEndPoint.swift in Sources */,
 				EE62AA2A239BB79D000D20A1 /* NetworkActivityIndicatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,18 +416,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EE62AA04239BB79C000D20A1 /* LaunchScreen.storyboard */ = {
+		EE62AA5F239BC7DA000D20A1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EE62AA05239BB79C000D20A1 /* Base */,
+				EE62AA60239BC7DA000D20A1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		EE62AA06239BB79C000D20A1 /* Main.storyboard */ = {
+		EE62AA61239BC7DA000D20A1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EE62AA07239BB79C000D20A1 /* Base */,
+				EE62AA62239BC7DA000D20A1 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
