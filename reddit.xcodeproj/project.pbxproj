@@ -32,6 +32,7 @@
 		EE62AA63239BC7DA000D20A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE62AA5F239BC7DA000D20A1 /* LaunchScreen.storyboard */; };
 		EE62AA64239BC7DA000D20A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE62AA61239BC7DA000D20A1 /* Main.storyboard */; };
 		EE62AA66239BCA41000D20A1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA65239BCA41000D20A1 /* Post.swift */; };
+		EE62AA68239BD24B000D20A1 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA67239BD24B000D20A1 /* PostListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		EE62AA60239BC7DA000D20A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE62AA62239BC7DA000D20A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE62AA65239BCA41000D20A1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		EE62AA67239BD24B000D20A1 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 		EE62AA39239BB8EA000D20A1 /* PostList */ = {
 			isa = PBXGroup;
 			children = (
+				EE62AA67239BD24B000D20A1 /* PostListViewModel.swift */,
 			);
 			name = PostList;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				EE62AA42239BB9D5000D20A1 /* DetailViewController.swift in Sources */,
 				EE62AA28239BB79D000D20A1 /* RemoteService.swift in Sources */,
 				EE62AA52239BBDF5000D20A1 /* RedditService.swift in Sources */,
+				EE62AA68239BD24B000D20A1 /* PostListViewModel.swift in Sources */,
 				EE62AA26239BB79D000D20A1 /* Environment.swift in Sources */,
 				EE62AA56239BBF3B000D20A1 /* PostList.swift in Sources */,
 				EE62AA66239BCA41000D20A1 /* Post.swift in Sources */,
