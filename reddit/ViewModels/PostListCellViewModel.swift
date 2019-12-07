@@ -1,5 +1,5 @@
 //
-//  PostDetailViewModel.swift
+//  PostListCellViewModel.swift
 //  reddit
 //
 //  Created by Juan Cruz Ghigliani on 07/12/2019.
@@ -8,17 +8,21 @@
 
 import Foundation
 
-protocol PostDetailViewModelDelegate: class {
-    func postDetailViewModelUpdated(_ postDetailViewModel: PostDetailViewModel)
+protocol PostListCellViewModelDelegate: class {
+    func postDetailViewModelUpdated(_ postListCellViewModel: PostListCellViewModel)
 }
 
-class PostDetailViewModel {
-    weak var delegate: PostDetailViewModelDelegate?
+class PostListCellViewModel {
+    weak var delegate: PostListCellViewModelDelegate?
 
     var post: Post? {
         didSet {
             delegate?.postDetailViewModelUpdated(self)
         }
+    }
+
+    var title: String {
+        post?.title ?? "..."
     }
 
     init(with post: Post) {

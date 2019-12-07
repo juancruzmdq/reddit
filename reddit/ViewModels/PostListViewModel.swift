@@ -16,7 +16,7 @@ protocol PostListViewModelDelegate: class {
 
 class PostListViewModel {
 
-    private let reditService: RedditServiceProtocol
+    private let redditService: RedditServiceProtocol
 
     weak var delegate: PostListViewModelDelegate?
 
@@ -36,13 +36,13 @@ class PostListViewModel {
         postList?.posts ?? []
     }
 
-    init(reditService: RedditServiceProtocol) {
-        self.reditService = reditService
+    init(with redditService: RedditServiceProtocol) {
+        self.redditService = redditService
     }
 
     func loadPosts() {
         loading = true
-        reditService.top { [weak self] result in
+        redditService.top { [weak self] result in
 
             guard let strongSelf = self else { return }
             strongSelf.loading = false

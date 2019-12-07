@@ -12,9 +12,9 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController?
 
-    var postListViewModel: PostListViewModel? {
+    var viewModel: PostListViewModel? {
         didSet {
-            postListViewModel?.delegate = self
+            viewModel?.delegate = self
         }
     }
 
@@ -23,7 +23,7 @@ class MasterViewController: UITableViewController {
 
         refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
 
-        postListViewModel?.loadPosts()
+        viewModel?.loadPosts()
 
         if let split = splitViewController {
             let controllers = split.viewControllers
@@ -40,7 +40,7 @@ class MasterViewController: UITableViewController {
     }
 
     @objc func refresh(sender: AnyObject) {
-        postListViewModel?.loadPosts()
+        viewModel?.loadPosts()
     }
 
     // MARK: - Segues
@@ -48,7 +48,7 @@ class MasterViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                if let post = postListViewModel?.posts[indexPath.row],
+                if let post = viewModel?.posts[indexPath.row],
                     let topController = (segue.destination as? UINavigationController)?.topViewController,
                     let detail = topController as? DetailViewController {
 
@@ -56,7 +56,7 @@ class MasterViewController: UITableViewController {
                     controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                     controller.navigationItem.leftItemsSupplementBackButton = true
                     detailViewController = controller
-                    detailViewController?.postDetailViewModel = PostDetailViewModel(post: post)
+                    detailViewController?.viewModel = PostDetailViewModel(with: post)
 
                 }
             }
@@ -70,20 +70,24 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return postListViewModel?.posts.count ?? 0
+        return viewModel?.posts.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        if let object = postListViewModel?.posts[indexPath.row] {
-            cell.textLabel!.text = object.title
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? PostListCell else {
+            return UITableViewCell()
+        }
+
+        if let post = viewModel?.posts[indexPath.row] {
+            cell.viewModel = PostListCellViewModel(with: post)
         }
         return cell
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            postListViewModel?.remove(at: indexPath.row)
+            viewModel?.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }

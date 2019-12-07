@@ -12,9 +12,9 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-    var postDetailViewModel: PostDetailViewModel? {
+    var viewModel: PostDetailViewModel? {
         didSet {
-            postDetailViewModel?.delegate = self
+            viewModel?.delegate = self
         }
     }
 
@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let post = postDetailViewModel?.post {
+        if let post = viewModel?.post {
             detailDescriptionLabel.text = post.title
         }
     }

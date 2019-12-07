@@ -34,6 +34,8 @@
 		EE62AA66239BCA41000D20A1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA65239BCA41000D20A1 /* Post.swift */; };
 		EE62AA68239BD24B000D20A1 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA67239BD24B000D20A1 /* PostListViewModel.swift */; };
 		EE62AA6A239BE195000D20A1 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA69239BE195000D20A1 /* PostDetailViewModel.swift */; };
+		EE62AA6C239BE676000D20A1 /* PostListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA6B239BE676000D20A1 /* PostListCellViewModel.swift */; };
+		EE62AA6E239BE70C000D20A1 /* PostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA6D239BE70C000D20A1 /* PostListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		EE62AA65239BCA41000D20A1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		EE62AA67239BD24B000D20A1 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		EE62AA69239BE195000D20A1 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
+		EE62AA6B239BE676000D20A1 /* PostListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCellViewModel.swift; sourceTree = "<group>"; };
+		EE62AA6D239BE70C000D20A1 /* PostListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				EE62AA67239BD24B000D20A1 /* PostListViewModel.swift */,
+				EE62AA6B239BE676000D20A1 /* PostListCellViewModel.swift */,
 			);
 			name = PostList;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				EE62AA3E239BB9D5000D20A1 /* MasterViewController.swift */,
+				EE62AA6D239BE70C000D20A1 /* PostListCell.swift */,
 			);
 			path = PostList;
 			sourceTree = "<group>";
@@ -383,9 +389,11 @@
 				EE62AA30239BB79D000D20A1 /* Storyboard.swift in Sources */,
 				EE62AA2C239BB79D000D20A1 /* Parser.swift in Sources */,
 				EE62AA00239BB78E000D20A1 /* AppDelegate.swift in Sources */,
+				EE62AA6C239BE676000D20A1 /* PostListCellViewModel.swift in Sources */,
 				EE62AA2D239BB79D000D20A1 /* RemoteProviderServiceStrategyProtocol.swift in Sources */,
 				EE62AA2E239BB79D000D20A1 /* RemoteServiceStrategies.swift in Sources */,
 				EE62AA6A239BE195000D20A1 /* PostDetailViewModel.swift in Sources */,
+				EE62AA6E239BE70C000D20A1 /* PostListCell.swift in Sources */,
 				EE62AA24239BB79D000D20A1 /* SceneDelegate.swift in Sources */,
 				EE62AA42239BB9D5000D20A1 /* DetailViewController.swift in Sources */,
 				EE62AA28239BB79D000D20A1 /* RemoteService.swift in Sources */,
