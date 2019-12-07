@@ -47,18 +47,19 @@ class MasterViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
-//            if let indexPath = tableView.indexPathForSelectedRow {
-//                if let object = objects[indexPath.row] as? NSDate,
-//                    let topController = (segue.destination as? UINavigationController)?.topViewController,
-//                    let detail = topController as? DetailViewController {
-//                    let controller = detail
-//                    controller.detailItem = object
-//                    controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-//                    controller.navigationItem.leftItemsSupplementBackButton = true
-//                    detailViewController = controller
-//
-//                }
-//            }
+            if let indexPath = tableView.indexPathForSelectedRow {
+                if let post = postListViewModel?.posts[indexPath.row],
+                    let topController = (segue.destination as? UINavigationController)?.topViewController,
+                    let detail = topController as? DetailViewController {
+
+                    let controller = detail
+                    controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+                    controller.navigationItem.leftItemsSupplementBackButton = true
+                    detailViewController = controller
+                    detailViewController?.postDetailViewModel = PostDetailViewModel(post: post)
+
+                }
+            }
         }
     }
 
@@ -98,7 +99,7 @@ extension MasterViewController: PostListViewModelDelegate {
     }
 
     func postListViewModelListUpdated(_ postListViewModel: PostListViewModel) {
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
 
     func postListViewModel(_ postListViewModel: PostListViewModel, reportError: Error) {

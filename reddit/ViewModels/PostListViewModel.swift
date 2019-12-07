@@ -22,18 +22,18 @@ class PostListViewModel {
 
     var postList: PostList? {
         didSet {
-            self.delegate?.postListViewModelListUpdated(self)
+            delegate?.postListViewModelListUpdated(self)
         }
     }
 
     var loading: Bool = false {
         didSet {
-            self.delegate?.postListViewModelLoadingUpdated(self)
+            delegate?.postListViewModelLoadingUpdated(self)
         }
     }
 
     var posts: [Post] {
-        self.postList?.posts ?? []
+        postList?.posts ?? []
     }
 
     init(reditService: RedditServiceProtocol) {
@@ -41,21 +41,23 @@ class PostListViewModel {
     }
 
     func loadPosts() {
-        self.loading = true
-        self.reditService.top { result in
-            self.loading = false
+        loading = true
+        reditService.top { [weak self] result in
+
+            guard let strongSelf = self else { return }
+            strongSelf.loading = false
 
             switch result {
             case let .success(postList):
-                self.postList = postList
+                strongSelf.postList = postList
             case let .failure(error):
-                self.delegate?.postListViewModel(self, reportError: error)
+                strongSelf.delegate?.postListViewModel(strongSelf, reportError: error)
             }
         }
     }
 
     func remove(at index: Int) {
-        self.postList?.posts.remove(at: index)
+        postList?.posts.remove(at: index)
     }
 
 }

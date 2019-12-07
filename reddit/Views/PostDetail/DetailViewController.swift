@@ -12,12 +12,9 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
-            }
+    var postDetailViewModel: PostDetailViewModel? {
+        didSet {
+            postDetailViewModel?.delegate = self
         }
     }
 
@@ -27,11 +24,19 @@ class DetailViewController: UIViewController {
         configureView()
     }
 
-    var detailItem: NSDate? {
-        didSet {
-            // Update the view.
-            configureView()
+    func configureView() {
+        // Update the user interface for the detail item.
+        if let post = postDetailViewModel?.post {
+            detailDescriptionLabel.text = post.title
         }
+    }
+
+}
+
+extension DetailViewController: PostDetailViewModelDelegate {
+
+    func postDetailViewModelUpdated(_ postDetailViewModel: PostDetailViewModel) {
+        configureView()
     }
 
 }

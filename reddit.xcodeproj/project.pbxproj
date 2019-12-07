@@ -33,6 +33,7 @@
 		EE62AA64239BC7DA000D20A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE62AA61239BC7DA000D20A1 /* Main.storyboard */; };
 		EE62AA66239BCA41000D20A1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA65239BCA41000D20A1 /* Post.swift */; };
 		EE62AA68239BD24B000D20A1 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA67239BD24B000D20A1 /* PostListViewModel.swift */; };
+		EE62AA6A239BE195000D20A1 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA69239BE195000D20A1 /* PostDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		EE62AA62239BC7DA000D20A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE62AA65239BCA41000D20A1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		EE62AA67239BD24B000D20A1 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
+		EE62AA69239BE195000D20A1 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,8 +155,8 @@
 		EE62AA02239BB79C000D20A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EE62AA3F239BB9D5000D20A1 /* PostDetail */,
 				EE62AA3D239BB9D5000D20A1 /* PostList */,
+				EE62AA3F239BB9D5000D20A1 /* PostDetail */,
 				EE62AA3B239BB934000D20A1 /* Storyboards */,
 			);
 			path = Views;
@@ -223,6 +225,7 @@
 		EE62AA3A239BB8FC000D20A1 /* PostDetail */ = {
 			isa = PBXGroup;
 			children = (
+				EE62AA69239BE195000D20A1 /* PostDetailViewModel.swift */,
 			);
 			path = PostDetail;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				EE62AA00239BB78E000D20A1 /* AppDelegate.swift in Sources */,
 				EE62AA2D239BB79D000D20A1 /* RemoteProviderServiceStrategyProtocol.swift in Sources */,
 				EE62AA2E239BB79D000D20A1 /* RemoteServiceStrategies.swift in Sources */,
+				EE62AA6A239BE195000D20A1 /* PostDetailViewModel.swift in Sources */,
 				EE62AA24239BB79D000D20A1 /* SceneDelegate.swift in Sources */,
 				EE62AA42239BB9D5000D20A1 /* DetailViewController.swift in Sources */,
 				EE62AA28239BB79D000D20A1 /* RemoteService.swift in Sources */,
