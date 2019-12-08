@@ -16,6 +16,7 @@ class PostListCell: UITableViewCell {
     @IBOutlet weak var numCommentLabel: UILabel!
     @IBOutlet weak var thumbImage: UIImageView!
     @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var titleAlignToSuperConstraint: NSLayoutConstraint!
 
     var viewModel: PostListCellViewModel? {
         didSet {
@@ -35,7 +36,12 @@ class PostListCell: UITableViewCell {
 
         if let thumbnailPath = viewModel?.thumbnail,
             let thumbnailUrl = URL(string: thumbnailPath) {
+            thumbImage.isHidden = false
             thumbImage.load(url: thumbnailUrl)
+            titleAlignToSuperConstraint.priority = .defaultLow
+        } else {
+            thumbImage.isHidden = true
+            titleAlignToSuperConstraint.priority = .required
         }
 
     }

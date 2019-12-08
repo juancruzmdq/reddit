@@ -34,7 +34,9 @@ class DetailViewController: UIViewController {
         if let thumbnailPath = viewModel?.thumbnail,
                 let thumbnailUrl = URL(string: thumbnailPath) {
                 thumbImage.load(url: thumbnailUrl)
-            }
+        } else {
+            thumbImage.isHidden = true
+        }
     }
 
 }

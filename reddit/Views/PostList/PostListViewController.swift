@@ -28,7 +28,7 @@ class PostListViewController: UIViewController {
         buildRefreshControl()
 
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 120
+        tableView.estimatedRowHeight = 125
 
         if let split = splitViewController {
             let controllers = split.viewControllers
