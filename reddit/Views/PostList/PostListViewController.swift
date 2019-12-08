@@ -42,6 +42,10 @@ class PostListViewController: UIViewController {
 
     }
 
+    @IBAction func dismissAllTap() {
+        viewModel?.dismissAll()
+    }
+
     @objc func refresh(sender: AnyObject) {
         viewModel?.loadPosts()
     }
@@ -68,7 +72,6 @@ class PostListViewController: UIViewController {
                     controller.navigationItem.leftItemsSupplementBackButton = true
                     detailViewController = controller
                     detailViewController?.viewModel = PostDetailViewModel(with: post)
-
                 }
             }
         }
@@ -92,21 +95,12 @@ extension PostListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
 
-        if let post = viewModel?.posts[indexPath.row] {
-            cell.viewModel = PostListCellViewModel(with: post)
+        if let viewModel = viewModel {
+            let post = viewModel.posts[indexPath.row]
+            cell.viewModel = PostListCellViewModel(with: post,
+                                                   postListManager: viewModel)
         }
         return cell
-    }
-
-}
-
-extension PostListViewController: UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            viewModel?.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
     }
 
 }
@@ -129,6 +123,10 @@ extension PostListViewController: PostListViewModelDelegate {
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
         present(alert, animated: true)
+    }
+
+    func postListViewModelDeleted(_ postListViewModel: PostListViewModel, at indexes: [IndexPath]) {
+        tableView.deleteRows(at: indexes, with: .fade)
     }
 
 }

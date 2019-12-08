@@ -173,6 +173,9 @@
                                                             <state key="normal" title="Dismiss Post">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="dismissPostTap" destination="wIg-PY-mXO" eventType="touchUpInside" id="mfH-ZL-gCe"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqB-fW-PAr">
                                                             <rect key="frame" x="93" y="0.0" width="261" height="30"/>
@@ -227,6 +230,9 @@
                                 <state key="normal" title="Dismiss All">
                                     <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="dismissAllTap" destination="F1B-Me-KEv" eventType="touchUpInside" id="PlK-vm-uDD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

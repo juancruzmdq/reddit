@@ -15,6 +15,8 @@ protocol PostListCellViewModelDelegate: class {
 class PostListCellViewModel {
     weak var delegate: PostListCellViewModelDelegate?
 
+    weak var postListManager: PostListModelManagerProtocol?
+
     var post: Post? {
         didSet {
             delegate?.postDetailViewModelUpdated(self)
@@ -55,7 +57,13 @@ class PostListCellViewModel {
         post?.visited ?? false
     }
 
-    init(with post: Post) {
+    init(with post: Post, postListManager: PostListModelManagerProtocol) {
         self.post = post
+        self.postListManager = postListManager
+    }
+
+    func dismiss() {
+        guard let post = self.post else { return }
+        postListManager?.dismiss(post: post)
     }
 }

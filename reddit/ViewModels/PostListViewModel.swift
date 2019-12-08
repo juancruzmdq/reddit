@@ -8,10 +8,16 @@
 
 import Foundation
 
+protocol PostListModelManagerProtocol: class {
+    func dismiss(post: Post)
+    func dismissAll()
+}
+
 protocol PostListViewModelDelegate: class {
     func postListViewModelLoadingUpdated(_ postListViewModel: PostListViewModel)
     func postListViewModelListUpdated(_ postListViewModel: PostListViewModel)
     func postListViewModel(_ postListViewModel: PostListViewModel, reportError: Error)
+    func postListViewModelDeleted(_ postListViewModel: PostListViewModel, at indexes: [IndexPath])
 }
 
 class PostListViewModel {
@@ -58,6 +64,30 @@ class PostListViewModel {
 
     func remove(at index: Int) {
         postList?.posts.remove(at: index)
+    }
+
+}
+
+extension PostListViewModel: PostListModelManagerProtocol {
+    func dismiss(post: Post) {
+
+        guard let index = postList?.posts.firstIndex(where: { $0 === post }) else {
+            return
+        }
+        postList?.posts.remove(at: index)
+        delegate?.postListViewModelDeleted(self, at: [IndexPath(item: index, section: 0)])
+    }
+
+    func dismissAll() {
+        guard let postList = self.postList else { return }
+
+        var allIndexes = [IndexPath]()
+
+        for index in postList.posts.indices {
+            allIndexes.append(IndexPath(item: index, section: 0))
+        }
+        postList.posts.removeAll()
+        delegate?.postListViewModelDeleted(self, at: allIndexes)
     }
 
 }

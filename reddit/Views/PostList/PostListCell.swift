@@ -28,6 +28,10 @@ class PostListCell: UITableViewCell {
         thumbImage.image = nil
     }
 
+    @IBAction func dismissPostTap() {
+        viewModel?.dismiss()
+    }
+
     func displayModelInfo() {
         userLabel.text = viewModel?.author
         timeLabel.text = viewModel?.created
