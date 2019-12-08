@@ -1,14 +1,16 @@
 //
-//  MasterViewController.swift
-//  deviget
+//  PostListViewController.swift
+//  reddit
 //
-//  Created by Juan Cruz Ghigliani on 07/12/2019.
+//  Created by Juan Cruz Ghigliani on 08/12/2019.
 //  Copyright © 2019 Juan Cruz Ghigliani. All rights reserved.
 //
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class PostListViewController: UIViewController {
+
+    @IBOutlet weak var tableView: UITableView!
 
     var detailViewController: DetailViewController?
 
@@ -21,9 +23,12 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        title = "Redit Posts"
 
-        viewModel?.loadPosts()
+        buildRefreshControl()
+
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 120
 
         if let split = splitViewController {
             let controllers = split.viewControllers
@@ -32,15 +37,21 @@ class MasterViewController: UITableViewController {
                 detailViewController = controller
             }
         }
-    }
 
-    override func viewWillAppear(_ animated: Bool) {
-        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
-        super.viewWillAppear(animated)
+        viewModel?.loadPosts()
+
     }
 
     @objc func refresh(sender: AnyObject) {
         viewModel?.loadPosts()
+    }
+
+    func buildRefreshControl() {
+        if tableView.refreshControl == nil {
+            tableView.refreshControl = UIRefreshControl()
+            tableView.refreshControl?.tintColor = .lightGray
+            tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        }
     }
 
     // MARK: - Segues
@@ -63,17 +74,19 @@ class MasterViewController: UITableViewController {
         }
     }
 
-    // MARK: - Table View
+}
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+extension PostListViewController: UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.posts.count ?? 0
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? PostListCell else {
             return UITableViewCell()
@@ -85,7 +98,11 @@ class MasterViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+}
+
+extension PostListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             viewModel?.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
@@ -94,11 +111,11 @@ class MasterViewController: UITableViewController {
 
 }
 
-extension MasterViewController: PostListViewModelDelegate {
+extension PostListViewController: PostListViewModelDelegate {
 
     func postListViewModelLoadingUpdated(_ postListViewModel: PostListViewModel) {
         if !postListViewModel.loading {
-            refreshControl?.endRefreshing()
+            tableView.refreshControl?.endRefreshing()
         }
     }
 

@@ -10,7 +10,9 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var thumbImage: UIImageView!
 
     var viewModel: PostDetailViewModel? {
         didSet {
@@ -26,9 +28,13 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let post = viewModel?.post {
-            detailDescriptionLabel.text = post.title
-        }
+        userLabel.text = viewModel?.author
+        titleLabel.text = viewModel?.title
+
+        if let thumbnailPath = viewModel?.thumbnail,
+                let thumbnailUrl = URL(string: thumbnailPath) {
+                thumbImage.load(url: thumbnailUrl)
+            }
     }
 
 }

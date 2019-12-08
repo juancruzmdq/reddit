@@ -10,16 +10,34 @@ import UIKit
 
 class PostListCell: UITableViewCell {
 
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var numCommentLabel: UILabel!
+    @IBOutlet weak var thumbImage: UIImageView!
+    @IBOutlet weak var dismissButton: UIButton!
 
     var viewModel: PostListCellViewModel? {
         didSet {
-            self.displayModelInfo()
+            displayModelInfo()
         }
     }
 
+    override func prepareForReuse() {
+        thumbImage.image = nil
+    }
+
     func displayModelInfo() {
-        self.titleLabel.text = viewModel?.title
+        userLabel.text = viewModel?.author
+        timeLabel.text = viewModel?.created
+        titleLabel.text = viewModel?.title
+        numCommentLabel.text = viewModel?.numComments
+
+        if let thumbnailPath = viewModel?.thumbnail,
+            let thumbnailUrl = URL(string: thumbnailPath) {
+            thumbImage.load(url: thumbnailUrl)
+        }
+
     }
 
 }

@@ -19,10 +19,8 @@
 		EE62AA2D239BB79D000D20A1 /* RemoteProviderServiceStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA16239BB79D000D20A1 /* RemoteProviderServiceStrategyProtocol.swift */; };
 		EE62AA2E239BB79D000D20A1 /* RemoteServiceStrategies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA17239BB79D000D20A1 /* RemoteServiceStrategies.swift */; };
 		EE62AA2F239BB79D000D20A1 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA18239BB79D000D20A1 /* EndPoint.swift */; };
-		EE62AA30239BB79D000D20A1 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA19239BB79D000D20A1 /* Storyboard.swift */; };
 		EE62AA34239BB79D000D20A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE62AA1E239BB79D000D20A1 /* Assets.xcassets */; };
 		EE62AA36239BB81B000D20A1 /* RedditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA35239BB81B000D20A1 /* RedditTests.swift */; };
-		EE62AA41239BB9D5000D20A1 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA3E239BB9D5000D20A1 /* MasterViewController.swift */; };
 		EE62AA42239BB9D5000D20A1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA40239BB9D5000D20A1 /* DetailViewController.swift */; };
 		EE62AA44239BBCFA000D20A1 /* RedditConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA43239BBCFA000D20A1 /* RedditConfig.swift */; };
 		EE62AA52239BBDF5000D20A1 /* RedditService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA51239BBDF5000D20A1 /* RedditService.swift */; };
@@ -36,6 +34,9 @@
 		EE62AA6A239BE195000D20A1 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA69239BE195000D20A1 /* PostDetailViewModel.swift */; };
 		EE62AA6C239BE676000D20A1 /* PostListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA6B239BE676000D20A1 /* PostListCellViewModel.swift */; };
 		EE62AA6E239BE70C000D20A1 /* PostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA6D239BE70C000D20A1 /* PostListCell.swift */; };
+		EEAB1A46239D198A00310BA4 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAB1A45239D198A00310BA4 /* PostListViewController.swift */; };
+		EEAB1A4D239D385900310BA4 /* UIImageView+LoadURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAB1A4B239D385900310BA4 /* UIImageView+LoadURL.swift */; };
+		EEAB1A4E239D385900310BA4 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAB1A4C239D385900310BA4 /* Storyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +66,8 @@
 		EE62AA16239BB79D000D20A1 /* RemoteProviderServiceStrategyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteProviderServiceStrategyProtocol.swift; sourceTree = "<group>"; };
 		EE62AA17239BB79D000D20A1 /* RemoteServiceStrategies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteServiceStrategies.swift; sourceTree = "<group>"; };
 		EE62AA18239BB79D000D20A1 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
-		EE62AA19239BB79D000D20A1 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		EE62AA1E239BB79D000D20A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE62AA35239BB81B000D20A1 /* RedditTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditTests.swift; sourceTree = "<group>"; };
-		EE62AA3E239BB9D5000D20A1 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		EE62AA40239BB9D5000D20A1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EE62AA43239BBCFA000D20A1 /* RedditConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditConfig.swift; sourceTree = "<group>"; };
 		EE62AA51239BBDF5000D20A1 /* RedditService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditService.swift; sourceTree = "<group>"; };
@@ -82,6 +81,9 @@
 		EE62AA69239BE195000D20A1 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 		EE62AA6B239BE676000D20A1 /* PostListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCellViewModel.swift; sourceTree = "<group>"; };
 		EE62AA6D239BE70C000D20A1 /* PostListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCell.swift; sourceTree = "<group>"; };
+		EEAB1A45239D198A00310BA4 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		EEAB1A4B239D385900310BA4 /* UIImageView+LoadURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadURL.swift"; sourceTree = "<group>"; };
+		EEAB1A4C239D385900310BA4 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +182,7 @@
 			children = (
 				EE62AA0D239BB79D000D20A1 /* Config */,
 				EE62AA10239BB79D000D20A1 /* Networking */,
-				EE62AA19239BB79D000D20A1 /* Storyboard.swift */,
+				EEAB1A4A239D385900310BA4 /* UIHelpers */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -248,7 +250,7 @@
 		EE62AA3D239BB9D5000D20A1 /* PostList */ = {
 			isa = PBXGroup;
 			children = (
-				EE62AA3E239BB9D5000D20A1 /* MasterViewController.swift */,
+				EEAB1A45239D198A00310BA4 /* PostListViewController.swift */,
 				EE62AA6D239BE70C000D20A1 /* PostListCell.swift */,
 			);
 			path = PostList;
@@ -260,6 +262,15 @@
 				EE62AA40239BB9D5000D20A1 /* DetailViewController.swift */,
 			);
 			path = PostDetail;
+			sourceTree = "<group>";
+		};
+		EEAB1A4A239D385900310BA4 /* UIHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				EEAB1A4B239D385900310BA4 /* UIImageView+LoadURL.swift */,
+				EEAB1A4C239D385900310BA4 /* Storyboard.swift */,
+			);
+			path = UIHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,10 +397,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE62AA2B239BB79D000D20A1 /* URLSessionProtocol.swift in Sources */,
-				EE62AA30239BB79D000D20A1 /* Storyboard.swift in Sources */,
 				EE62AA2C239BB79D000D20A1 /* Parser.swift in Sources */,
 				EE62AA00239BB78E000D20A1 /* AppDelegate.swift in Sources */,
 				EE62AA6C239BE676000D20A1 /* PostListCellViewModel.swift in Sources */,
+				EEAB1A4E239D385900310BA4 /* Storyboard.swift in Sources */,
 				EE62AA2D239BB79D000D20A1 /* RemoteProviderServiceStrategyProtocol.swift in Sources */,
 				EE62AA2E239BB79D000D20A1 /* RemoteServiceStrategies.swift in Sources */,
 				EE62AA6A239BE195000D20A1 /* PostDetailViewModel.swift in Sources */,
@@ -399,10 +410,11 @@
 				EE62AA28239BB79D000D20A1 /* RemoteService.swift in Sources */,
 				EE62AA52239BBDF5000D20A1 /* RedditService.swift in Sources */,
 				EE62AA68239BD24B000D20A1 /* PostListViewModel.swift in Sources */,
+				EEAB1A4D239D385900310BA4 /* UIImageView+LoadURL.swift in Sources */,
 				EE62AA26239BB79D000D20A1 /* Environment.swift in Sources */,
 				EE62AA56239BBF3B000D20A1 /* PostList.swift in Sources */,
 				EE62AA66239BCA41000D20A1 /* Post.swift in Sources */,
-				EE62AA41239BB9D5000D20A1 /* MasterViewController.swift in Sources */,
+				EEAB1A46239D198A00310BA4 /* PostListViewController.swift in Sources */,
 				EE62AA27239BB79D000D20A1 /* Config.swift in Sources */,
 				EE62AA29239BB79D000D20A1 /* StatusBarNetworkActivityIndicator.swift in Sources */,
 				EE62AA5E239BC66C000D20A1 /* Reddit.swift in Sources */,

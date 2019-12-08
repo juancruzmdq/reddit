@@ -25,6 +25,36 @@ class PostListCellViewModel {
         post?.title ?? "..."
     }
 
+    var author: String {
+        post?.author ?? "..."
+    }
+
+    var created: String {
+        guard let created = post?.created else {
+            return ""
+        }
+
+        let createdDate = Date(timeIntervalSince1970: TimeInterval(created))
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+
+        let relativeDate = formatter.localizedString(for: createdDate, relativeTo: Date())
+
+        return relativeDate
+    }
+
+    var numComments: String {
+        "\(post?.numComments ?? 0) Commments"
+    }
+
+    var thumbnail: String? {
+        post?.thumbnail
+    }
+
+    var visited: Bool {
+        post?.visited ?? false
+    }
+
     init(with post: Post) {
         self.post = post
     }
