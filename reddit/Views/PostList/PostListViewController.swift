@@ -79,6 +79,7 @@ class PostListViewController: UIViewController {
                     let controller = detail
                     controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                     controller.navigationItem.leftItemsSupplementBackButton = true
+                    controller.URLPresenter = UIApplication.shared
                     controller.viewModel = PostDetailViewModel(with: post, postListManager: viewModel)
                     detailViewController = controller
                 }

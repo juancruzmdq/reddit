@@ -14,7 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var thumbImage: UIImageView!
 
-    var URLPresenter: URLPresenterProtocol = UIApplication.shared
+    var URLPresenter: URLPresenterProtocol?
 
     var viewModel: PostDetailViewModel? {
         didSet {
@@ -56,7 +56,7 @@ class DetailViewController: UIViewController {
     @IBAction func thumbImageTap(gesture: UIGestureRecognizer) {
         if let urlString = viewModel?.thumbnail,
             let url = URL(string: urlString) {
-            URLPresenter.open(url, options: [:], completionHandler: nil)
+            URLPresenter?.open(url, options: [:], completionHandler: nil)
         }
     }
 
