@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  deviget
+//  reddit
 //
 //  Created by Juan Cruz Ghigliani on 07/12/2019.
 //  Copyright © 2019 Juan Cruz Ghigliani. All rights reserved.
@@ -11,10 +11,6 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
-
-    lazy var redditApp: Reddit = {
-        Reddit()
-    }()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -32,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UISplitViewControllerDe
                 return
         }
 
-        postListController.viewModel = PostListViewModel(with: redditApp.redditService)
+        postListController.viewModel = PostListViewModel(with: Reddit.shared.redditService)
 
     }
 

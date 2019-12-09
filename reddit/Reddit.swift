@@ -10,6 +10,8 @@ import Foundation
 
 class Reddit {
 
+    static let shared = Reddit()
+
     let config: RedditConfig
     let networkActivityIndicator: NetworkActivityIndicatorProtocol
     let redditService: RedditServiceProtocol
