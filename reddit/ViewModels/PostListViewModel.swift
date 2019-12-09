@@ -11,6 +11,7 @@ import Foundation
 protocol PostListModelManagerProtocol: class {
     func dismiss(post: Post)
     func dismissAll()
+    func visit(_ post: Post)
 }
 
 protocol PostListViewModelDelegate: class {
@@ -88,6 +89,11 @@ extension PostListViewModel: PostListModelManagerProtocol {
         }
         postList.posts.removeAll()
         delegate?.postListViewModelDeleted(self, at: allIndexes)
+    }
+
+    func visit(_ post: Post) {
+        post.visited = true
+        delegate?.postListViewModelListUpdated(self)
     }
 
 }

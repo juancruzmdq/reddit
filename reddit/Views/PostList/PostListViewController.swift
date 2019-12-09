@@ -63,15 +63,17 @@ class PostListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                if let post = viewModel?.posts[indexPath.row],
+                if let viewModel = self.viewModel,
                     let topController = (segue.destination as? UINavigationController)?.topViewController,
                     let detail = topController as? DetailViewController {
+
+                    let post = viewModel.posts[indexPath.row]
 
                     let controller = detail
                     controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                     controller.navigationItem.leftItemsSupplementBackButton = true
+                    controller.viewModel = PostDetailViewModel(with: post, postListManager: viewModel)
                     detailViewController = controller
-                    detailViewController?.viewModel = PostDetailViewModel(with: post)
                 }
             }
         }

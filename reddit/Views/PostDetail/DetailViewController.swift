@@ -26,6 +26,10 @@ class DetailViewController: UIViewController {
         configureView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel?.visit()
+    }
+
     func configureView() {
         // Update the user interface for the detail item.
         userLabel.text = viewModel?.author

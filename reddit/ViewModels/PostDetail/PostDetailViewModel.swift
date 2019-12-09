@@ -15,6 +15,9 @@ protocol PostDetailViewModelDelegate: class {
 class PostDetailViewModel {
     weak var delegate: PostDetailViewModelDelegate?
 
+    weak var postListManager: PostListModelManagerProtocol?
+
+
     var post: Post? {
         didSet {
             delegate?.postDetailViewModelUpdated(self)
@@ -33,7 +36,13 @@ class PostDetailViewModel {
         post?.thumbnail
     }
 
-    init(with post: Post) {
+    init(with post: Post, postListManager: PostListModelManagerProtocol) {
         self.post = post
+        self.postListManager = postListManager
+    }
+
+    func visit() {
+        guard let post = self.post else { return }
+        postListManager?.visit(post)
     }
 }

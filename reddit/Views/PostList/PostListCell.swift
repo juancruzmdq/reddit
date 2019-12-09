@@ -16,6 +16,7 @@ class PostListCell: UITableViewCell {
     @IBOutlet weak var numCommentLabel: UILabel!
     @IBOutlet weak var thumbImage: UIImageView!
     @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var visitedLabel: UILabel!
     @IBOutlet weak var titleAlignToSuperConstraint: NSLayoutConstraint!
 
     var viewModel: PostListCellViewModel? {
@@ -33,12 +34,15 @@ class PostListCell: UITableViewCell {
     }
 
     func displayModelInfo() {
-        userLabel.text = viewModel?.author
-        timeLabel.text = viewModel?.created
-        titleLabel.text = viewModel?.title
-        numCommentLabel.text = viewModel?.numComments
+        guard let viewModel = self.viewModel else { return }
 
-        if let thumbnailPath = viewModel?.thumbnail,
+        userLabel.text = viewModel.author
+        timeLabel.text = viewModel.created
+        titleLabel.text = viewModel.title
+        numCommentLabel.text = viewModel.numComments
+        visitedLabel.isHidden = viewModel.visited
+
+        if let thumbnailPath = viewModel.thumbnail,
             let thumbnailUrl = URL(string: thumbnailPath) {
             thumbImage.isHidden = false
             thumbImage.load(url: thumbnailUrl)

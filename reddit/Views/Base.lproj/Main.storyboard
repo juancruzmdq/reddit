@@ -135,14 +135,20 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DOO-FM-cbY">
                                                     <rect key="frame" x="30" y="11" width="354" height="18"/>
                                                     <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⦿" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htI-1l-9QM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="12" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N61-wx-ODk">
-                                                            <rect key="frame" x="0.0" y="0.0" width="37.5" height="18"/>
+                                                            <rect key="frame" x="17" y="0.0" width="37.5" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dh-be-Dgp">
-                                                            <rect key="frame" x="42.5" y="0.0" width="311.5" height="18"/>
+                                                            <rect key="frame" x="59.5" y="0.0" width="294.5" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -213,6 +219,7 @@
                                             <outlet property="titleAlignToSuperConstraint" destination="fsr-vW-p1I" id="3Ry-iB-aQ9"/>
                                             <outlet property="titleLabel" destination="sca-qN-Y2f" id="ENy-T5-JMt"/>
                                             <outlet property="userLabel" destination="N61-wx-ODk" id="W3e-Of-Xjo"/>
+                                            <outlet property="visitedLabel" destination="htI-1l-9QM" id="lMm-x0-RWc"/>
                                             <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="xhc-b3-RVD"/>
                                         </connections>
                                     </tableViewCell>
