@@ -14,6 +14,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var thumbImage: UIImageView!
 
+    var URLPresenter: URLPresenterProtocol = UIApplication.shared
+
     var viewModel: PostDetailViewModel? {
         didSet {
             viewModel?.delegate = self
@@ -22,8 +24,8 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         configureView()
+        addTapGestureToImage()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +42,21 @@ class DetailViewController: UIViewController {
                 thumbImage.load(url: thumbnailUrl)
         } else {
             thumbImage.isHidden = true
+        }
+    }
+
+    func addTapGestureToImage() {
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(DetailViewController.thumbImageTap(gesture:)))
+
+        thumbImage.addGestureRecognizer(tapGesture)
+        thumbImage.isUserInteractionEnabled = true
+    }
+
+    @IBAction func thumbImageTap(gesture: UIGestureRecognizer) {
+        if let urlString = viewModel?.thumbnail,
+            let url = URL(string: urlString) {
+            URLPresenter.open(url, options: [:], completionHandler: nil)
         }
     }
 

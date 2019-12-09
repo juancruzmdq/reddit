@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE4C8EAD239E72DB0022B5EF /* UIApplication+URLPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4C8EAC239E72DB0022B5EF /* UIApplication+URLPresenter.swift */; };
 		EE62AA00239BB78E000D20A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62A9FF239BB78E000D20A1 /* AppDelegate.swift */; };
 		EE62AA24239BB79D000D20A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA09239BB79C000D20A1 /* SceneDelegate.swift */; };
 		EE62AA26239BB79D000D20A1 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE62AA0E239BB79D000D20A1 /* Environment.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE4C8EAC239E72DB0022B5EF /* UIApplication+URLPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+URLPresenter.swift"; sourceTree = "<group>"; };
 		EE62A9D7239BB6A4000D20A1 /* reddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE62A9EF239BB6A5000D20A1 /* redditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = redditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE62A9F5239BB6A5000D20A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 		EEAB1A4A239D385900310BA4 /* UIHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				EE4C8EAC239E72DB0022B5EF /* UIApplication+URLPresenter.swift */,
 				EEAB1A4B239D385900310BA4 /* UIImageView+LoadURL.swift */,
 				EEAB1A4C239D385900310BA4 /* Storyboard.swift */,
 			);
@@ -416,6 +419,7 @@
 				EE62AA66239BCA41000D20A1 /* Post.swift in Sources */,
 				EEAB1A46239D198A00310BA4 /* PostListViewController.swift in Sources */,
 				EE62AA27239BB79D000D20A1 /* Config.swift in Sources */,
+				EE4C8EAD239E72DB0022B5EF /* UIApplication+URLPresenter.swift in Sources */,
 				EE62AA29239BB79D000D20A1 /* StatusBarNetworkActivityIndicator.swift in Sources */,
 				EE62AA5E239BC66C000D20A1 /* Reddit.swift in Sources */,
 				EE62AA44239BBCFA000D20A1 /* RedditConfig.swift in Sources */,
