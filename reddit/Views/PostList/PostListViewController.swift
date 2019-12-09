@@ -25,10 +25,7 @@ class PostListViewController: UIViewController {
 
         title = "Redit Posts"
 
-        buildRefreshControl()
-
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 125
+        configureTableView()
 
         if let split = splitViewController {
             let controllers = split.viewControllers
@@ -48,6 +45,16 @@ class PostListViewController: UIViewController {
 
     @objc func refresh(sender: AnyObject) {
         viewModel?.loadPosts()
+    }
+
+    func configureTableView() {
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 125
+
+        // hide separators for empty cells
+        tableView.tableFooterView = UIView()
+
+        buildRefreshControl()
     }
 
     func buildRefreshControl() {
